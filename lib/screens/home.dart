@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:leorio/screens/Vendor_page.dart';
 import 'package:leorio/screens/cart.dart';
+import 'package:leorio/screens/pages/reciever.dart';
+
+import 'pages/send_user.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -149,7 +152,13 @@ class _HomeState extends State<Home> {
                             child: SizedBox(
                               height: 50,
                               child: ElevatedButton.icon(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const Receiver()));
+                                },
                                 icon: Icon(
                                   Icons.arrow_circle_down_outlined,
                                   size: 24,
@@ -169,7 +178,13 @@ class _HomeState extends State<Home> {
                               width: 100,
                               height: 50,
                               child: ElevatedButton.icon(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const SendUser()));
+                                },
                                 icon: Icon(
                                   Icons.arrow_circle_up_outlined,
                                 ),
