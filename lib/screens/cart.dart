@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leorio/screens/checkout.dart';
+import 'package:leorio/widgets/my_button.dart';
 
 class Cart extends StatefulWidget {
   const Cart({super.key});
@@ -151,31 +152,7 @@ class _CartState extends State<Cart> {
           SizedBox(
             height: 10,
           ),
-          Directionality(
-            textDirection: TextDirection.rtl,
-            child: SizedBox(
-              width: 300,
-              height: 60,
-              child: ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Checkout()));
-                },
-                icon: Icon(
-                  Icons.arrow_back,
-                ),
-                label: Text(
-                  "Proceed",
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: Color(0xff5542fd),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          MyButton(text: 'Proceed', icon: Icons.arrow_back_outlined, onTap: Checkout())
         ],
       ),
     );

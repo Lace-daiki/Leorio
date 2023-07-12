@@ -3,6 +3,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:leorio/screens/Vendor_page.dart';
 import 'package:leorio/screens/cart.dart';
 import 'package:leorio/screens/pages/reciever.dart';
+import 'package:leorio/screens/pages/transactions_page.dart';
 
 import 'pages/send_user.dart';
 
@@ -14,24 +15,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int currentIndex = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    initialization();
-  }
-
-  void initialization() async {
-    // This is where you can initialize the resources needed by your app while
-    // the splash screen is displayed.  Remove the following example because
-    // delaying the user experience is a bad design practice!
-    // ignore_for_file: avoid_print
-    await Future.delayed(const Duration(seconds: 1));
-    await Future.delayed(const Duration(seconds: 1));
-    await Future.delayed(const Duration(seconds: 1));
-    FlutterNativeSplash.remove();
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -57,27 +41,6 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: (index) => setState(() => currentIndex = index),
-        currentIndex: currentIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: Colors.blue,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.wallet),
-            label: 'Transactions',
-            backgroundColor: Colors.red,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.apps),
-            label: 'Settings',
-            backgroundColor: Colors.blue,
-          ),
-        ],
       ),
       body: Column(
         children: [

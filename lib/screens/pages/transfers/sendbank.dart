@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:leorio/screens/pages/transfers/sendfooduser/bankdial_pad.dart';
 import 'package:leorio/screens/pages/transfers/sendfooduser/senddial_pad.dart';
+import 'package:leorio/widgets/bank_dropdown.dart';
 import 'package:leorio/widgets/my_button.dart';
 import 'package:leorio/widgets/my_text_field.dart';
 
-class SendToUser extends StatelessWidget {
-  const SendToUser({super.key});
+class SendToBank extends StatelessWidget {
+  const SendToBank({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +37,9 @@ class SendToUser extends StatelessWidget {
             MyTextField(
               fieldName: 'Enter @username',
             ),
+            BankDropdown(),
             MyTextField(
-              fieldName: 'Amount',
+              fieldName: 'Enter Amount',
             ),
             MyTextField(
               fieldName: 'Narration',
@@ -47,7 +50,7 @@ class SendToUser extends StatelessWidget {
             MyButton(
               text: 'Proceed',
               icon: Icons.arrow_back_outlined,
-              onTap: SendDialPad(),
+              onTap: BankDialPad(),
             )
           ],
         ),

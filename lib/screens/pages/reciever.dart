@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:leorio/screens/pages/transfers/receivebank_payment.dart';
+import 'package:leorio/screens/pages/transfers/receivepayment.dart';
 import 'package:leorio/widgets/list_tile.dart';
 
 class Receiver extends StatelessWidget {
@@ -33,12 +35,12 @@ class Receiver extends StatelessWidget {
             ListTileWidget(
               title: 'Use @username',
               leadingIcon: Icons.person_outlined,
-              onTap: 'fsdgvd',
+              onTap: ReceiveUsername(),
             ),
             ListTileWidget(
               title: 'Bank details',
               leadingIcon: Icons.account_balance_outlined,
-              onTap: 'dsc',
+              onTap: ReceiveBankPayment(),
             ),
           ],
         ),

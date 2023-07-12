@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leorio/widgets/my_button.dart';
 
 class Checkout extends StatefulWidget {
   const Checkout({super.key});
@@ -34,11 +35,11 @@ class _CheckoutState extends State<Checkout> {
       ),
       body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: const EdgeInsets.only(
-                left: 35.0,
+                right: 200.0,
                 bottom: 13,
               ),
               child: Text(
@@ -64,7 +65,7 @@ class _CheckoutState extends State<Checkout> {
                 ],
               ),
               child: Padding(
-                padding: const EdgeInsets.all(11.0),
+                padding: const EdgeInsets.all(21.0),
                 child: Column(
                   children: [
                     Row(
@@ -137,7 +138,7 @@ class _CheckoutState extends State<Checkout> {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                left: 35.0,
+                right: 200.0,
                 bottom: 13,
               ),
               child: Text(
@@ -163,7 +164,7 @@ class _CheckoutState extends State<Checkout> {
                 ],
               ),
               child: Padding(
-                padding: const EdgeInsets.all(11.0),
+                padding: const EdgeInsets.all(21.0),
                 child: Column(
                   children: [
                     Row(
@@ -234,31 +235,11 @@ class _CheckoutState extends State<Checkout> {
             SizedBox(
               height: 200,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 35.0),
-              child: Directionality(
-                textDirection: TextDirection.rtl,
-                child: SizedBox(
-                  width: 300,
-                  height: 60,
-                  child: ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.arrow_back,
-                    ),
-                    label: Text(
-                      "Pay Now",
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xff5542fd),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            MyButton(
+              text: 'Pay Now',
+              icon: Icons.arrow_back_outlined,
+              onTap: 'onTap',
+            )
           ],
         ),
       ),

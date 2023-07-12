@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:leorio/screens/pages/transfers/sendbank.dart';
+import 'package:leorio/screens/pages/transfers/sendpayment_page.dart';
 import 'package:leorio/widgets/list_tile.dart';
 
 class SendUser extends StatelessWidget {
@@ -33,12 +35,12 @@ class SendUser extends StatelessWidget {
             ListTileWidget(
               title: 'To Foodapp User',
               leadingIcon: Icons.person_outlined,
-              onTap: 'jnsvf',
+              onTap: SendToUser(),
             ),
             ListTileWidget(
               title: 'Send to bank',
               leadingIcon: Icons.account_balance_outlined,
-              onTap: 'jdncs',
+              onTap: SendToBank(),
             ),
           ],
         ),
