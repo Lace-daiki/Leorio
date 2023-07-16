@@ -47,7 +47,7 @@ class SendToUser extends StatelessWidget {
             MyButton(
               text: 'Proceed',
               icon: Icons.arrow_back_outlined,
-              onTap: SendDialPad(),
+              onTap: DialPadScreen(),
             )
           ],
         ),

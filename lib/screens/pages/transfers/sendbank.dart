@@ -45,12 +45,12 @@ class SendToBank extends StatelessWidget {
               fieldName: 'Narration',
             ),
             SizedBox(
-              height: 280,
+              height: 250,
             ),
             MyButton(
               text: 'Proceed',
               icon: Icons.arrow_back_outlined,
-              onTap: BankDialPad(),
+              onTap: PaymentDialPadScreen(),
             )
           ],
         ),
